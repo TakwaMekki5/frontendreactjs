@@ -11,15 +11,21 @@ function App() {
     return (
         <BrowserRouter>
             <Navigation />
-            <div className="form-container">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/logout" element={<Logout />} />
-                </Routes>
+            <div className="content-container">
+            <div class="form-and-image-container">
+                 <div className="image-container">
+                 <img src="C:\Users\tmekki\Desktop\frontendreactjs\public\images\sopra_log.png" alt="Logo SopraHR" className="image" />
+                </div>
+                <div className="form-container">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/logout" element={<Logout />} />
+                    </Routes>
+                </div>
+                </div>
             </div>
         </BrowserRouter>
     );
 }
-
 export default App;

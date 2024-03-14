@@ -48,12 +48,14 @@ export const Login = () => {
     <div className="Auth-form-container">
       <form className="Auth-form" onSubmit={submit}>
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
+        <div className="logo-container">
+          <img src="C:\Users\tmekki\Desktop\frontendreactjs\public\images\Logo_Sign_In.jpg" alt="Logo Sign In" className="signin-logo" />
+        </div>
+          <h3 className="Auth-form-title login-title">Sign In </h3>
           <div className="form-group mt-3">
-            <label>Username</label>
             <input
               className="form-control mt-1"
-              placeholder="Enter Username"
+              placeholder="Username*"
               name="username"
               type="text"
               value={username}
@@ -62,22 +64,33 @@ export const Login = () => {
             />
           </div>
           <div className="form-group mt-3">
-            <label>Password</label>
+           
             <input
               name="password"
               type="password"
               className="form-control mt-1"
-              placeholder="Enter password"
+              placeholder="Password*"
               value={password}
               required
               onChange={e => setPassword(e.target.value)}
             />
           </div>
+          <div className="remember-forgot-container">
+              <label className="remember-me">
+               <input type="checkbox" /> Remember me
+              </label>
+             <a href="/forgot-password" className="forgot-password-link">Forgot password?</a>
+            </div>
+
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary login-button">Login</button>
+          <div className="mt-3">
+            Don't have an account? <a href="/signup">Create an Account</a>
+          </div>
           </div>
         </div>
       </form>
     </div>
   );
 };
+

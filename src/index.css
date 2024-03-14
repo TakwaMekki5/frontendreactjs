@@ -6,20 +6,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+body {
+  background-image: url('C:\Users\tmekki\Desktop\frontendreactjs\public\images\Untitled2.png'); /* Remplacez 'chemin_vers_votre_image.jpg' par le chemin de votre image */
+  background-size: cover; /* Pour couvrir toute la surface de la page */
+  background-position: center; /* Pour centrer l'image */
+  background-repeat: no-repeat; /* Pour éviter que l'image se répète */
 }
 
-.form-field {
-  width: 300px; /* ou toute autre largeur souhaitée */
-  margin-bottom: 15px;
-}
+
+
+
+
 
 
