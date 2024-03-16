@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
 .logo-container {
   display: flex;
   justify-content: center; /* Centre l'image horizontalement */
@@ -74,30 +75,47 @@
   display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
-  height: 70vh; /* Hauteur égale à 70% de la hauteur de la fenêtre */
+  height: 80vh; /* Hauteur égale à 70% de la hauteur de la fenêtre */
 
 }
 .form-and-image-container {
   display: flex;
-  border: 1px solid #f1f1f1; /* Bordure pour le conteneur */
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); /* Ombre */
+  background: transparent; /* Couleur de fond */
+  border: 2px solid rgba(255, 255, 255, .2); /* Bordure pour le conteneur */
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); /* Ombre */
   border-radius: 10px; /* Coins arrondis */
-  background-color: #f8f9fa; /* Couleur de fond */
+  padding: 30px 40px;
+  
 }
+
 /* Styles pour le conteneur du formulaire */
 .form-container {
-  margin-left: 250px;
+  margin-left: 20px;
   width: 400px; /* Largeur du formulaire */
   height: 450px; /* Hauteur du formulaire */
   padding: 50px;
   /* Arrondir les coins du formulaire */
+
 }
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #ccc; /* Couleur de l'icône pour imiter un placeholder */
+}
+
+
 .image-container {
   width: 200px; /* Largeur de l'image */
   padding: 20px;
 }
-
-
 
 .remember-forgot-container {
   display: flex;
@@ -113,10 +131,40 @@
   text-decoration: none;
   color: #007bff; /* Couleur du lien */
 }
-
 .forgot-password-link:hover {
   text-decoration: underline; /* Souligner le lien au survol */
 }
 
+/* Styles pour le bouton Login */
+.create-button {
+  background-color: #d20202; /* Couleur de fond rouge */
+  color: #ffffff; /* Texte blanc */
+  border: none; /* Supprime les bordures */
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 50px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de la souris */
+}
+.create-button:hover {
+  background-color: #d20202; /* Couleur de fond rouge au survol */
+}
 
 
+.black-link {
+  color: black;
+}
+
+
+.icon-wrapper {
+  position: absolute;
+  right: 250px;
+  top: 36%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+.icon--wrapper {
+  position: absolute;
+  right: 250px;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}

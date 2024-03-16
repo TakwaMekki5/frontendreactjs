@@ -10,14 +10,14 @@ export function Navigation() {
     }, [isAuth]);
      return ( 
       <div>
-        <Navbar bg="" variant="dark">
+        <Navbar bg="" variant="">
                      
           <Nav className="me-auto"> 
           {isAuth ? <Nav.Link href="/">Home</Nav.Link> : null}
           </Nav>
           <Nav>
           {isAuth ? <Nav.Link href="/logout">Logout</Nav.Link> :  
-                    <Nav.Link href="/login">Login</Nav.Link>}
+                    <Nav.Link href="/login">Exit</Nav.Link>}
           </Nav>
         </Navbar>
        </div>

@@ -1,18 +1,19 @@
-// Import des packages React JS
 import axios from "axios";
 import { useState } from "react";
 
 // Définition de la fonction Login.
-export const Login = () => {
-  const [username, setUsername] = useState('');
+export const NAccount = () => {
+  const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [Confirmpassword, setConfirmPassword] = useState('');
 
   // Création de la méthode de soumission.
   const submit = async e => {
     e.preventDefault();
     const user = {
-      username: username,
-      password: password
+      Email: Email,
+      password: password,
+      Confirmpassword: Confirmpassword
     };
 
     // Création de la requête POST
@@ -48,23 +49,19 @@ export const Login = () => {
     <div className="Auth-form-container">
       <form className="Auth-form" onSubmit={submit}>
         <div className="Auth-form-content">
-        <div className="logo-container">
-          <img src="C:\Users\tmekki\Desktop\frontendreactjs\public\images\Logo_Sign_In.jpg" alt="Logo Sign In" className="signin-logo" />
-        </div>
-          <h3 className="Auth-form-title login-title">Sign In </h3>
+          <h3 className="Auth-form-title login-title">Sign Up</h3>
           <div className="form-group mt-3">
             <input
               className="form-control mt-1"
-              placeholder="Username*"
-              name="username"
+              placeholder="Email*"
+              name="Email"
               type="text"
-              value={username}
+              value={Email}
               required
-              onChange={e => setUsername(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
           <div className="form-group mt-3">
-           
             <input
               name="password"
               type="password"
@@ -75,18 +72,23 @@ export const Login = () => {
               onChange={e => setPassword(e.target.value)}
             />
           </div>
-          <div className="remember-forgot-container">
-              <label className="remember-me">
-               <input type="checkbox" /> Remember me
-              </label>
-             <a href="/forgot-password" className="forgot-password-link">Forgot password?</a>
-            </div>
-
-          <div className="d-grid gap-2 mt-3">
-          <button type="submit" className="btn btn-primary login-button">Login</button>
-          <div className="mt-3">
-            Don't have an account? <a href="/signup">Create an Account</a>
+          <div className="form-group mt-3">
+            <input
+              name="Confirmpassword"
+              type="Confirmpassword"
+              className="form-control mt-1"
+              placeholder="Confirm Password*"
+              value={Confirmpassword}
+              required
+              onChange={e => setConfirmPassword(e.target.value)}
+            />
           </div>
+          <div className="d-grid gap-2 mt-3">
+          <button type="submit" className="btn btn-primary login-button">CREATE A NEW ACCOUNT</button>
+          <div className="mt-3">
+           Have an account? <a href="/login" className="black-link">Sign in</a>
+          </div>
+
           </div>
         </div>
       </form>

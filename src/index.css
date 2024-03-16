@@ -11,10 +11,9 @@ code {
     monospace;
 }
 
-
 body {
-  background-image: url('C:\Users\tmekki\Desktop\frontendreactjs\public\images\Untitled2.png'); /* Remplacez 'chemin_vers_votre_image.jpg' par le chemin de votre image */
-  background-size: cover; /* Pour couvrir toute la surface de la page */
+  background-image: url('C:\Users\tmekki\Desktop\frontendreactjs\public\images\SSS.jpg'); /* Remplacez 'chemin_vers_votre_image.jpg' par le chemin de votre image */
+  background-size: 1250px 671px; /* Pour couvrir toute la surface de la page */
   background-position: center; /* Pour centrer l'image */
   background-repeat: no-repeat; /* Pour éviter que l'image se répète */
 }
