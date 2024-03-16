@@ -53,7 +53,7 @@ export const ChangePassword = () => {
           <div className="form-group mt-3">
             <input
               className="form-control mt-1"
-              placeholder="Password*"
+              placeholder="Password"
               name="Password"
               type="text"
               value={Password}
@@ -66,7 +66,7 @@ export const ChangePassword = () => {
               name="Confirmpassword"
               type="Confirmpassword"
               className="form-control mt-1"
-              placeholder="Confirm Password*"
+              placeholder="Confirm Password"
               value={ChangePassword}
               required
               onChange={e => setConfirmPassword(e.target.value)}
@@ -74,8 +74,12 @@ export const ChangePassword = () => {
           </div>
     
           <div className="d-grid gap-2 mt-3">
-          <button type="submit" className="btn btn-primary login-button">CONTINUE</button>
+          <button type="submit" className="btn btn-primary login-button">Continue</button>
           </div>
+          <div className="d-grid gap-2 mt-3">
+            <a href="/login" className="btn btn-primary login-button">Annuler</a>
+          </div>
+          
         </div>
       </form>
     </div>
