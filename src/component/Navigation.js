@@ -4,14 +4,13 @@ import React, { useState, useEffect} from 'react';
 export function Navigation() {
    const [isAuth, setIsAuth] = useState(false);
    useEffect(() => {
-     if (localStorage.getItem('access_token') !== null) {
+     if (localStorage.getItem('access_token') ) {
         setIsAuth(true); 
       }
     }, [isAuth]);
      return ( 
       <div>
-        <Navbar bg="" variant="">
-                     
+        <Navbar bg="" variant="">     
           <Nav className="me-auto"> 
           {isAuth ? <Nav.Link href="/">Home</Nav.Link> : null}
           </Nav>

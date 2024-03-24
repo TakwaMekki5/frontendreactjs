@@ -12,43 +12,28 @@ import { Dashboard } from './component/Dashboard';
 import { Logout } from './component/logout';
 import { Part } from './component/part';
 
-
-
 function App() {
     return (
         <BrowserRouter>
-             <Navigation />
+            <Navigation />
             <div className="content-container">
-            <div class="form-and-image-container">
-                
-                <div className="form-container">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/logout" element={<Logout />} />
-                    </Routes>
-                    <Routes>
-                          <Route exact path="/" element={<Login/>} />
-                          <Route path="/Password" element={<Password/>} />
-                     </Routes>
-                    <Routes>
-                          <Route exact path="/" element={<Login/>} />
-                          <Route path="/naccount" element={<NAccount/>} />
-                     </Routes>
-                     <Routes>
-                           <Route path="/changepassword" element={<ChangePassword />} />
-                     </Routes>
-                     <Routes>
-                           <Route path="/dashboard" element={<Dashboard/>} />
-                     </Routes>
-                     <Routes>
-                           <Route path="/part" element={<Part/>} />
-                     </Routes>
-                    
-                </div>
+                <div className="form-and-image-container">
+                    <div className="form-container">
+                        <Routes>
+                            <Route path="/" element={<Login />} />
+                            <Route path="/password" element={<Password />} />
+                            <Route path="/naccount" element={<NAccount />} />
+                            <Route path="/changepassword" element={<ChangePassword />} />
+                            <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/part" element={<Part />} />
+                            <Route path="/logout" element={<Logout />} />
+                            <Route path="/home" element={<Home />} />
+                        </Routes>
+                    </div>
                 </div>
             </div>
         </BrowserRouter>
     );
 }
+
 export default App;

@@ -11,13 +11,12 @@ export const Part = ({ history }) => {
         <label>Nom du Partenaire:</label>
         <input type="text" className="form-control" />
       </div>
-
       <div className="form-group">
         <label>choisir le serveur:</label>
         <select className="form-control">
           <option value="">Sélectionner une option</option>
-          <option value="V01">V01</option>
-          <option value="V03">V03</option>
+          <option value="V01">frsopslcftv01</option>
+          <option value="V03">frsopslcftv03</option>
         </select>
       </div>
 

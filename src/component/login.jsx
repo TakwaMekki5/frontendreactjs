@@ -2,40 +2,43 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa"
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const submit = async e => {
+  const submit = e => {
     e.preventDefault();
     const user = {
       username: username,
       password: password
     };
-
-    try {
-      const { data } = await axios.post(
-        'http://localhost:8000/token/',
-        user,
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true
-        }
-      );
-
+  
+    axios.post('http://127.0.0.1:8000/token/', user, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+     // withCredentials: true
+    })
+    .then(response => {
+      const { data } = response;
+  
+      console.log("DATA :", data);
+  
       localStorage.clear();
       localStorage.setItem('access_token', data.access);
       localStorage.setItem('refresh_token', data.refresh);
-
-      axios.defaults.headers.common['Authorization'] = `Bearer ${data.access}`;
-
-      window.location.href = '/';
-    } catch (error) {
+      
+      axios.defaults.headers.common['Authorization'] = `Bearer ${data.access}`
+  
+      //window.location.href = '/';
+      navigate('/Dashboard');
+    })
+    .catch(error => {
       console.error("Erreur lors de la soumission du formulaire :", error);
-    }
+    });
   };
 
   return (
@@ -73,27 +76,17 @@ export const Login = () => {
               required
               onChange={e => setPassword(e.target.value)}
             />
-            
-          
         </div>
-
           <div className="remember-forgot-container">
             <label className="remember-me">
               <input type="checkbox" /> Remember me
            </label>
              <a href="/password" className="black-link">Forgot password?</a>
           </div>
-
           <div className="d-grid gap-2 mt-3">
-            <a href="/Dashboard" className="btn btn-primary login-button">Login</a>
+          <button type="submit" className="btn btn-primary login-button">Login</button>
           </div>
-          
-          <div className="mt-3">
-           Don't have an account? <a href="/naccount" className="black-link">Create an Account</a>
-          </div>
-
         </div>
-      
       </form>
     </div>
   );

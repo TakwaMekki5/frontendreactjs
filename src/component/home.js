@@ -33,7 +33,6 @@ export const Home = () => {
             })();
         }
      }, []); // Le tableau vide en tant que deuxième argument indique que useEffect ne s'exécute qu'une seule fois au chargement du composant
-
      // Rendu du composant Home
      return (
         <div className="form-signin mt-5 text-center">

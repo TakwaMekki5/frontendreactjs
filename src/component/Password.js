@@ -63,8 +63,6 @@ export const Password = () => {
           <div className="mt-3">
            Return to <a href="/login" className="black-link">Sign in</a>
            </div>
-
-          
         </div>
       </form>
     </div>
